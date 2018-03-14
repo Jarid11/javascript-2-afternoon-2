@@ -164,33 +164,39 @@ function finder(arr) {
 var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 // Do not edit the code above.
 
-/*
-  Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
 
-  Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
-  If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
+  // Here we're going to write a function that mimics going shopping and checking things off of our grocery list and adding new items to our list.
 
-  Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
-  In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
+  // Write a function called removeItem that is given two arguments, the first is myGroceryList, and the second is an item to remove from myGroceryList. 
+  // If the second argument (or the item to add or remove) matches an item in myGroceryList, remove that item from the your grocery list and return the new, updated grocery list.
 
-  In both the removeItem function and the addItem function, you will also need to check for valid aurguments. SpecRunner will try to call your functions without passing in valid aurguments. 
-  When this happens, you will need to respond by returning an empty array.
+  // Once you do that, write another function called addItem that is given two arguments, the first is myGroceryList and the second is an item to add to your grocery list. 
+  // In addItem add the item you passed in to myGroceryList then return the new, updated grocery list.
 
-  Here are some examples of calling your functions and what should be returned:
-  removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
-  addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
-*/
+  // In both the removeItem function and the addItem function, you will also need to check for valid aurguments. SpecRunner will try to call your functions without passing in valid aurguments. 
+  // When this happens, you will need to respond by returning an empty array.
 
-// function removeItem(myGroceryList, item) {
-//   for(let i = 0; i < myGroceryList.length; i++) {
-//     if(myGroceryList[i] === item) {
-//       myGroceryList.splice(i, 1)
-//     }
-//   }
-//   console.log(myGroceryList)
-// }
+  // Here are some examples of calling your functions and what should be returned:
+  // console.log(removeItem(myGroceryList, 'chips'));
+  // console.log(addItem(myGroceryList, 'Jerky'));
 
-// removeItem(myGroceryList, "pizza");
+
+function removeItem(myGroceryList, item) {
+  for(let i = 0; i < myGroceryList.length; i++) {
+    if(myGroceryList[i] === item) {
+      myGroceryList.splice(i, 1)
+    }
+  }
+  return myGroceryList;
+}
+
+function addItem(myGroceryList, item) {
+    myGroceryList.push(item);
+    return myGroceryList;
+}
+
+
+
 
 
 
@@ -200,7 +206,13 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 */
 
-//Code Here
+function maker() {
+  var arr = [];
+  for(let i = 1 ; i <= 215; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
 
 
 
@@ -216,8 +228,11 @@ var numbers = [5, '9', 16, 19, '25', '34', 48];
   *Verify your answer is correct. --> [15, 19, 26, 29, 35, 44, 58]
 */
   
-//Code Here
+function addTen(numbers) {
+  return numbers.map(a=>Number(a)+10);
+}
 
+addTen(numbers);
 
 
 ////////// PROBLEM 11 //////////
@@ -241,7 +256,13 @@ for(var i = 0; i < num2; i++){
   Return the array which is longest.
 */
 
-//Code Here
+function longer(arr1, arr2) {
+  if(arr1.length < arr2.length && arr1.length > arr2.length) {
+    return arr1;
+  } else {
+    return arr2;
+  }
+}
 
 
 
@@ -253,7 +274,9 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2) {
+
+}
 
 
 
